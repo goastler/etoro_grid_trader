@@ -1,2 +1,2 @@
 # etoro_grid_trader
-Etoro grid trader using selenium.
+Etoro grid trader as a chrome extension.
