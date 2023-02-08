@@ -1,0 +1,26 @@
+{
+  "name": "Etoro Grid Trader",
+  "version": "1.0.0",
+  "description": "Grid trade on etoro",
+  "manifest_version": 3,
+  "author": "George Oastler",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {},
+  "content_scripts": [{
+    "matches": ["*://*.etoro.com/*"],
+    "js": ["jquery-3.6.0.min.js", "content.js"]
+  }],
+  "web_accessible_resources": [
+    {
+      "resources": ["config.js", "inject.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
